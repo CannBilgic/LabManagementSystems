@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: OzgurYazilimProje
+  profiles:
+    active: localhost
+  main:
+    allow-bean-definition-overriding: true
+info:
+  component:Ozgur Yazilim Proje
+
+---
+
+Spring:
+  config:
+    activate:
+      on-profile: localhost
+
+  cloud:
+    config:
+      uri: http://localhost:8888
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/OzgurYazilim"
+    username: postgres
+    password: 12345
